@@ -9,6 +9,9 @@ Une page 404
 
 ## l'axe choisit
 un thème épuré pour mettre en valeur le travail du photographe.
+### Fonts
+Titres : Playfair Display.
+Corps de texte : Lato.
 
 ### Arborescence
 #### Header
