@@ -33,3 +33,6 @@ Les catégories.
 Un article. 
 Une colone à droite avec d'autres articles. 
 #### Page 404
+
+## La maquette
+https://www.figma.com/file/x5nE3xXiWHgBti2nJyZWrz/Wordpress?node-id=0%3A1
