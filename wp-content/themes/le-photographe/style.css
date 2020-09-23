@@ -1,0 +1,17 @@
+/*
+Theme Name: le-photographe
+Theme URI: https://le-photographe-wp
+Author: Lisa Devoghelaere
+Author URI: https://lisa-web-and-design.fr
+Description: Thème wordpress pour photographe.
+Version: 1.0
+*/
+
+.menu {/*code à retenir pour plus tard*/
+    position: fixed;
+    top: 0px;
+}
+
+.admin-bar .menu {
+	top: 32px; /* on prend en compte le décalage */
+}
