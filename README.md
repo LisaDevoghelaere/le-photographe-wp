@@ -39,3 +39,8 @@ Une colone à droite avec d'autres articles.
 
 ## La maquette
 https://www.figma.com/file/x5nE3xXiWHgBti2nJyZWrz/Wordpress?node-id=0%3A1
+
+## Les technologies / cours
+- Capitaine wp / Graphikart
+- plugin ACF
+- Foogallery / Jetpack
