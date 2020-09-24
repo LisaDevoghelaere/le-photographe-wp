@@ -15,7 +15,7 @@
       <a href="<?php echo home_url( '/' ); ?>">
         <img src="<?php echo get_template_directory_uri(); ?>/img/photographe_logo.png" alt="Logo">
       </a>  
-      <h1><?php the_title(); ?></h1> 
+      <h1>Le Photographe</h1> 
       <?php 
     if( has_nav_menu('header-menu')){
       wp_nav_menu(

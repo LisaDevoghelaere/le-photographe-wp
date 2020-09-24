@@ -1,13 +1,30 @@
 <?php 
-
-// Ajouter la prise en charge des images mises en avant
-add_theme_support( 'post-thumbnails' );
-
-// Ajouter automatiquement le titre du site dans l'en-tête du site
-add_theme_support( 'title-tag' );
-
 //Ajoute une nouvelle zone de menu
 function register_menu(){
     register_nav_menu('header-menu', __( 'Menu Header'));
 }
+function ph_supports () {
+    // Ajouter automatiquement le titre du site dans l'en-tête du site
+    add_theme_support( 'title-tag' );
+    // Ajouter la prise en charge des images mises en avant
+    add_theme_support( 'post-thumbnails' );
+}
+//fonction pour mettre les scripts Bootstrap
+function ph_register_assets () {
+    wp_register_style('bootstrap', 'https://developer.wordpress.org/reference/functions/wp_register_style/');
+    wp_register_script('bootstrap','https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', ['popper', 'jquery'], false, true);
+    wp_register_script('popper','https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js', [], false, true);
+    wp_deregister_script('jquery');
+    wp_register_script('jquery','https://code.jquery.com/jquery-3.5.1.slim.min.js', [], false, true);
+    wp_enqueue_style('bootstrap');
+    wp_enqueue_script('bootstrap');
+}
+
+
+//action qui ajoute le titre du site dans l'entête et la prise en charge des images en avant
+add_action('after_setup_theme', 'ph_supports');
+//Ajoute une zone de menu
 add_action('init', 'register_menu');
+// Ajout du style Bootstrap
+add_action( 'wp_enqueue_scripts', 'ph_register_assets');
+
