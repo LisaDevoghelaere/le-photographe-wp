@@ -6,8 +6,8 @@
     ?>
     <?php while ($recentPosts->have_posts()) : $recentPosts->the_post(); ?>
         <div>
-            <h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
-            <p><?php the_post_thumbnail(); ?></p>  
+            <p><?php the_post_thumbnail(); ?></p> 
+            <h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3> 
             <p class="post__meta">
                 Publié le <?php the_time( get_option( 'date_format' ) ); ?> 
                 par <?php the_author(); ?> • <?php comments_number(); ?>
@@ -21,18 +21,18 @@
     <?php
         $littlePosts = new WP_Query(
             );
-        $littlePosts->query('showposts=4',(array(
+        $littlePosts->query('showposts=3',(array(
             'post_type' => 'post',
             'order_by' => 'date',
             'order' => 'DESC',
             'post_per_page'=>3,
-            'offset'=>2
-    )));
+            'offset'=>2)
+        ));
     ?>
     <?php while ($littlePosts->have_posts()) : $littlePosts->the_post(); ?>
         <div>
-            <h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
             <p><?php the_post_thumbnail(); ?></p> 
+            <h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3> 
             <p class="post__meta">
                 Publié le <?php the_time( get_option( 'date_format' ) ); ?> 
                 par <?php the_author(); ?> • <?php comments_number(); ?>

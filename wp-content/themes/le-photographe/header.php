@@ -10,11 +10,13 @@
   <body <?php body_class(); ?>>
   <div class="container">
     <header class="header">
-        <div class="barnav">
-          <a href="<?php echo home_url( '/' ); ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/photographe_logo.png" alt="Logo" class="logo">
-          </a>  
-          <h1>Le Photographe</h1> 
+        <nav class="navbar navbar-light bg-light">
+          <div>
+            <a href="<?php echo home_url( '/' ); ?>">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/photographe_logo.png" alt="Logo" class="logo">
+            </a>  
+            <h1>Le Photographe</h1> 
+          </div>
           <?php 
         if( has_nav_menu('header-menu')){
           wp_nav_menu(
@@ -25,9 +27,9 @@
           );
         }
         ?>
-        </div>
+        </nav>
         <div class="hero">
-          <img src="" alt="La photo du hero">
+        <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/header1.jpg" alt="image du header">
         </div>
 
       </header>
