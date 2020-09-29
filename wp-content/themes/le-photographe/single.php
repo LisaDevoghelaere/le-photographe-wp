@@ -20,6 +20,9 @@
         <?php the_content(); ?>
       </div>
     </div>
-
+<div>
+  <p><?php previous_post_link() ?></p>
+  <p><?php next_post_link() ?></p>
+</div>
   <?php endwhile; endif; ?>
 <?php get_footer(); ?>
