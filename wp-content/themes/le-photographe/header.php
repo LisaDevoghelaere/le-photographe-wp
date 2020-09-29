@@ -7,30 +7,30 @@
       
       <?php wp_head(); ?>
   </head>
-
   <body <?php body_class(); ?>>
-  <div class="container-fluid">
-    <header class="header">
-        <div class="upperbar container-fluid">
-          <nav class="barnav container">
-            <div>
-              <a href="<?php echo home_url( '/' ); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/photographe_logo.png" alt="Logo" class="logo">
-              </a>  
-              <p class="nom-site"><a href="<?php the_permalink() ?>"><?php echo get_bloginfo( 'name' ); ?></a></p> 
-            </div>
-              <?php 
-            if( has_nav_menu('header-menu')){
-              wp_nav_menu(
-                array(
-                'theme_location' => 'header-menu',
-                'menu_class' => 'navbar'
-                )
-              );
-            }
-            ?>
-          
+    <div class="container-fluid">
+      <header class="header">
+          <div class="upperbar container">
+            <nav class="barnav row">
+              <div>
+                <a href="<?php echo home_url( '/' ); ?>">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/photographe_logo.png" alt="Logo" class="logo">
+                </a>  
+                <p><a href="<?php the_permalink() ?>"><?php echo get_bloginfo( 'name' ); ?></a></p> 
+              </div>
+              <div>
+                <?php 
+                  if( has_nav_menu('header-menu')){
+                      wp_nav_menu(
+                      array(
+                      'theme_location' => 'header-menu',
+                      'menu_class' => 'navbar'
+                      )
+                    );
+                  }
+                ?>
+              </div>
+            </nav>
           </div>
-          </nav>
       </header>
-      <?php wp_body_open(); ?>
+  <?php wp_body_open(); ?>

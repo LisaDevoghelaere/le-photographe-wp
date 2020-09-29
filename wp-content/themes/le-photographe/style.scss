@@ -14,20 +14,27 @@ body{
 }
 h1, h2, h3{
     font-family: $title-font;
-    color : red;
+    color : black;
+}
+a{
+    color : black;
+    &:hover{   
+    color : black; 
+    }
 }
 /* -------------NavBar--------------*/
 .logo {
     width: 50px;
     height: auto;
+    padding-left: 1rem;
+    padding-top: 1rem;
 }
 .barnav{
     position : fixed;
-    z-index: 1000;
-    width: 100%;
-    // top: 0;
+    z-index: 100;
+    width: 101%;
     left : 0;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0);
     padding : 0.3rem;
     display: flex;
     justify-content: space-between;
@@ -36,26 +43,33 @@ h1, h2, h3{
         display: flex;
         justify-content: space-between;
         align-content: center;
-        // width: 100%;
         ul{
             width: 100%;
             list-style: none;
             margin-bottom: 0;
+            color:white;
             li{
                 padding-top : 0.5rem;
                 padding-bottom : 0.5rem;
                 padding-left: 2rem;
+                font-size: 1.5rem;
+                font-weight : 700;
+                a{
+                    color:white;
+                }
             }
+        }
+        p>a{
+            padding-left: 1rem;
+            padding-top: 1rem;
+            font-size: 2.5rem;
+            color:white;
+            font-family: $title-font;
         }
     }
 
 }
-.nom-site{
-    font-size: 2rem;
-    margin-bottom: 0;
-    font-family: $title-font;
-    color: black;
-}
+/* ---------------------------FRONT-PAGE----------------------- */
 .hero-img{
     width : 100%;
     height : auto;
@@ -65,6 +79,56 @@ h1, h2, h3{
 }
 .titre-hero{
     position : absolute;
-    top : 20%;
+    top: 0;
+    left : 0;
+    width : 100%;
+    height : 100%;
+    background-color: rgba(10, 10, 10, 0.5);
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
     
+}
+.titre-hero-flex{
+    width : 50%;
+    padding-top : 4rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    position: relative;
+    h1{
+        font-size: 5rem;
+        color: white; 
+    }
+    p{
+        font-size: 3rem;
+        color: white;
+        font-weight: $light; 
+    }
+}
+.ligne{
+    width : 100px;
+    height : 4px;
+    background-color: red;
+    align-self: center;
+}
+.titre-h2-front-page{
+    font-size: 3rem;
+    text-align: center;
+    margin : 2rem;
+}
+.ph-margin-top{
+    margin-top: 2rem;
+}
+.ph-margin-bottom{
+    margin-bottom: 2rem;
+}
+.avatar{
+    box-sizing: border-box;
+}
+.a-block{
+    display : block;
 }

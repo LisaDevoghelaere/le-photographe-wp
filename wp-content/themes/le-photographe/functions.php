@@ -38,13 +38,6 @@ function ph_register_assets () {
     wp_register_style('style', get_stylesheet_uri());
     wp_enqueue_style( 'style');
 }
-//pour retirer le slogan
-// function ph_document_title_parts($title)
-// {
-// unset($title['tagline']);
-// return $title;
-// }
-// add_filter('document_title_parts', 'ph_document_title_parts');
 
 // ********************************ADD_ACTION******************************
 //action qui ajoute le titre du site dans l'entête et la prise en charge des images en avant
@@ -53,18 +46,3 @@ add_action('after_setup_theme', 'ph_supports');
 add_action('init', 'register_menu');
 // Ajout du style Bootstrap
 add_action( 'wp_enqueue_scripts', 'ph_register_assets');
-//ici envoi du shortcode
-
-
-//Atelier de Manu sur les shortCodes et leur utilisation
-// function shortcode_photographe($atts){
-//     extract(shortcode_atts(
-//         array(
-//             'color'=> 'red'
-//         ), $atts));
-//     $html = "<h2 style=\"color:".$color."\">Wp atelier cool la life</h2>";
-//     $html .= "<p>paragraphe</p>";
-//     return $html;
-// }
-// .= signifie concaténation
-// add_shortcode('photographe', 'shortcode_photographe');

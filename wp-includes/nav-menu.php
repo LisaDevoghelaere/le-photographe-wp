@@ -133,7 +133,7 @@ function unregister_nav_menu( $location ) {
  * @param string $location    Menu location identifier, like a slug.
  * @param string $description Menu location descriptive text.
  */
-function register_nav_menu( $location, $description ) {
+function  register_nav_menu( $location, $description ) {
 	register_nav_menus( array( $location => $description ) );
 }
 /**
