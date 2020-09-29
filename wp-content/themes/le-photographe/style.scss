@@ -6,17 +6,65 @@ Author URI: https://lisa-web-and-design.fr
 Description: Thème wordpress pour photographe.
 Version: 1.0
 */
+@import'sass/variables.scss';
+/* -------------Base--------------*/
+
+body{
+    font-family: $txt-font;
+}
+h1, h2, h3{
+    font-family: $title-font;
+    color : red;
+}
+/* -------------NavBar--------------*/
 .logo {
     width: 50px;
     height: auto;
 }
-body{
-    font-family: 'Lato', sans-serif;
+.barnav{
+    position : fixed;
+    z-index: 1000;
+    width: 100%;
+    // top: 0;
+    left : 0;
+    background-color: rgba(0, 0, 0, 0);
+    padding : 0.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    div{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        // width: 100%;
+        ul{
+            width: 100%;
+            list-style: none;
+            margin-bottom: 0;
+            li{
+                padding-top : 0.5rem;
+                padding-bottom : 0.5rem;
+                padding-left: 2rem;
+            }
+        }
+    }
+
 }
-h1, h2, h3{
-    font-family: 'Playfair Display', serif;
+.nom-site{
+    font-size: 2rem;
+    margin-bottom: 0;
+    font-family: $title-font;
+    color: black;
 }
-/*
-font-family: 'Lato', sans-serif;
-font-family: 'Playfair Display', serif;
-*/
+.hero-img{
+    width : 100%;
+    height : auto;
+}
+.hero{
+    position: relative;
+}
+.titre-hero{
+    position : absolute;
+    top : 20%;
+    
+}

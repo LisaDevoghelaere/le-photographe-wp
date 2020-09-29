@@ -7,21 +7,84 @@ Author URI: https://lisa-web-and-design.fr
 Description: Thème wordpress pour photographe.
 Version: 1.0
 */
+/*
+font-family: 'Lato', sans-serif;
+font-family: 'Playfair Display', serif;
+*/
+/* -------------Base--------------*/
+body {
+  font-family: "Lato", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  color: red;
+}
+
+/* -------------NavBar--------------*/
 .logo {
   width: 50px;
   height: auto;
 }
 
-body {
-  font-family: 'Lato', sans-serif;
+.barnav {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
+.barnav div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
-/*
-font-family: 'Lato', sans-serif;
-font-family: 'Playfair Display', serif;
-*/
+.barnav div ul {
+  width: 100%;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.barnav div ul li {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 2rem;
+}
+
+.nom-site {
+  font-size: 2rem;
+  margin-bottom: 0;
+  font-family: "Playfair Display", serif;
+  color: black;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+}
+
+.hero {
+  position: relative;
+}
+
+.titre-hero {
+  position: absolute;
+  top: 20%;
+}
 /*# sourceMappingURL=style.css.map */
