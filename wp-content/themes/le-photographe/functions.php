@@ -19,24 +19,32 @@ function ph_register_assets () {
      wp_enqueue_style( 'fonts' );
      // ********************* BOOTSTRAP ********************************
      //style
-    wp_register_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+    // wp_register_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+    wp_register_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+
     //js
     wp_register_script('bootstrap','https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', ['popper', 'jquery'], false, true);
     wp_register_script('popper','https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js', [], false, true);
     //jquery
     wp_deregister_script('jquery');
     wp_register_script('jquery','https://code.jquery.com/jquery-3.5.1.slim.min.js', [], false, true);
+    wp_register_script('fontawesome', 'https://kit.fontawesome.com/5458cc12a8.js',[], false, true);
 
     wp_enqueue_style('bootstrap');
     wp_enqueue_script('bootstrap');
+    wp_enqueue_script('fontawesome');
+
     // ******************MON STYLE.CSS ******************************
-    wp_enqueue_style( 
-        'photographe',
-        get_stylesheet_uri(), 
-        array(), 
-        '1.0'
-    );
+    wp_register_style('style', get_stylesheet_uri());
+    wp_enqueue_style( 'style');
 }
+//pour retirer le slogan
+// function ph_document_title_parts($title)
+// {
+// unset($title['tagline']);
+// return $title;
+// }
+// add_filter('document_title_parts', 'ph_document_title_parts');
 
 // ********************************ADD_ACTION******************************
 //action qui ajoute le titre du site dans l'entête et la prise en charge des images en avant
@@ -60,4 +68,3 @@ add_action( 'wp_enqueue_scripts', 'ph_register_assets');
 // }
 // .= signifie concaténation
 // add_shortcode('photographe', 'shortcode_photographe');
-
