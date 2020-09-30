@@ -30,11 +30,12 @@
 <section id="services" class="container">
     <h2 class="titre-h2-front-page">Services</h2>
     <div class="row">
-    <a href="" class="a-block col-3"><div>Mariage</div></a>
-    <a href="" class="a-block col-3"><div>Évenements</div></a>
-    <a  href="" class="a-block col-3"><div>Immobillier</div></a>
-    <a  href="" class="a-block col-3"><div>Portrait</div></a>
+    <a href="<?php echo get_template_directory_uri(); ?>/mariage" class="a-block col-3" id="service-mariage"><div><p class="center col-12">Mariage</p></div></a>
+    <a href="<?php echo get_template_directory_uri(); ?>/evenement" class="a-block col-3"><div><p class="center col-12">Évènement</p></div></a>
+    <a  href="<?php echo get_template_directory_uri(); ?>/immobillier" class="a-block col-3"><div><p class="center col-12">Immobillier</p></div></a>
+    <a  href="<?php echo get_template_directory_uri(); ?>/portrait" class="a-block col-3"><div><p class="center col-12">Portrait</p></div></a>
     </div>
+
 </section> 
 <!-- *****************************Derniers Articles*************************** -->
 <section id="actus" class="container">
@@ -52,7 +53,7 @@
                     <h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3> 
                     <p class="post__meta">
                         Publié le <?php the_time( get_option( 'date_format' ) ); ?> 
-                        par <?php the_author(); ?> • <?php echo get_comments_number(); ?>
+                        par <?php the_author(); ?> • <?php the_terms(get_the_ID(), 'service') ?> • <?php echo get_comments_number(); ?>
                         <?php the_excerpt(); ?> 
                         <a href="<?php the_permalink(); ?>" class="post__link">Lire la suite</a>
                     </p>
@@ -84,7 +85,7 @@
                                 Publié le <?php the_time( get_option( 'date_format' ) ); ?> 
                                 par <?php the_author(); ?> • <?php echo get_comments_number(); ?>
                                 •
-                                <a href="<?php the_permalink(); ?>" class="post__link">Lire la suite</a>
+                                <a href="<?php the_permalink(); ?>" class="post__link">Lire l'article</a>
                             </p>
                         </div>
                     </div>
@@ -93,4 +94,10 @@
         </div>
     </div>
 </section>
+<!-- *****************************Galerie*************************** -->
+<section id="galerie" class="container">
+    <h2 class="titre-h2-front-page">Galerie</h2>
+    <div class="row">
+    <?php echo do_shortcode('[foogallery id="152"]'); ?>
+    </div>
 <?php get_footer();
