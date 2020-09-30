@@ -130,5 +130,17 @@ a{
     box-sizing: border-box;
 }
 .a-block{
-    display : block;
+        display : block;
+    div{
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        height: 4rem;
+        .center{
+            display: block;
+            text-align: center;
+            align-self: center;
+            font-size: 1.8rem;
+        }
+    }
 }
