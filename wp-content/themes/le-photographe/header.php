@@ -14,7 +14,7 @@
             <nav class="barnav row">
               <div>
                 <a href="<?php echo home_url( '/' ); ?>">
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/photographe_logo.png" alt="Logo" class="logo">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo">
                 </a>  
                 <p><a href="<?php the_permalink() ?>"><?php echo get_bloginfo( 'name' ); ?></a></p> 
               </div>
