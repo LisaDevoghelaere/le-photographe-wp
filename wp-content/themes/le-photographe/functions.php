@@ -38,8 +38,34 @@ function ph_register_assets () {
     wp_register_style('style', get_stylesheet_uri());
     wp_enqueue_style( 'style');
 }
+function ph_init(){
+    register_taxonomy('service', ['post', 'page'],[
+        'labels' => [
+            'name' => 'Service',
+            'plural_name' => 'Services',
+            'search_items' => 'Rechercher les différents services',
+            'all_items' => 'Tous les services',
+            'edit_item' => 'Editer le service',
+            'update_item' => 'Mettre à jour le service',
+            'add_new_item' => 'ajouter un nouveau service',
+            'new_item_name'=> 'ajouter un nouveau nom au service',
+            'menu_name' => 'Service'
+
+        ],
+        'show_in_rest' => true,
+        'hierarchical' => true,
+        'show_admin_cloumn'=> true
+    ]);
+    register_post_type('galerie', [
+        'label' => 'Galerie',
+        'public' => true,
+        'menu_icon' => 'dashicons-format-gallery'
+    ]);
+}
 
 // ********************************ADD_ACTION******************************
+//init
+add_action('init', 'ph_init');
 //action qui ajoute le titre du site dans l'entête et la prise en charge des images en avant
 add_action('after_setup_theme', 'ph_supports');
 //Ajoute une zone de menu
