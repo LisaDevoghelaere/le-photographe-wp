@@ -42,5 +42,6 @@ https://www.figma.com/file/x5nE3xXiWHgBti2nJyZWrz/Wordpress?node-id=0%3A1
 
 ## Les technologies / cours
 - Capitaine wp / Graphikart
-- plugin ACF
-- Foogallery / Jetpack
+- Modula (pour la galerie)
+
+- plugin ACF (à voir)

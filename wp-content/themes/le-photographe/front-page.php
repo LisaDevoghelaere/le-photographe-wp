@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <!-- *****************************HERO*************************** -->
-<section id="hero-accueil container">
+<section id="hero-accueil">
     <div class="row hero">
         <img class="hero-img" src="<?php echo get_template_directory_uri(); ?>/img/header1.jpg" alt="image du header" class="col-lg-12 col-md-12 col-sm-12 col-12">
         <div class="titre-hero col-lg-12 col-md-12 col-sm-12 col-12">
@@ -98,6 +98,6 @@
 <section id="galerie" class="container">
     <h2 class="titre-h2-front-page">Galerie</h2>
     <div class="row">
-    <?php echo do_shortcode('[foogallery id="152"]'); ?>
+    <?php echo do_shortcode('[modula id="195"]'); ?>
     </div>
 <?php get_footer();

@@ -84,6 +84,7 @@ a{
     width : 100%;
     height : 100%;
     background-color: rgba(10, 10, 10, 0.5);
+    box-sizing: border-box;
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -142,5 +143,13 @@ a{
             align-self: center;
             font-size: 1.8rem;
         }
+    }
+}
+.banniere{
+    h1{
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 700;
+        margin : 2rem;
     }
 }

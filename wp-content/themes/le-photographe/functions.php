@@ -12,7 +12,7 @@ function register_menu(){
     register_nav_menu('header-menu', __( 'Menu Header'));
 }
 
-// *******************************************************Ajout du style*******************************************
+// ****************************************Ajout du style*******************************************
 function ph_register_assets () {
      // ******************* FONTS ***********************************
      wp_register_style('fonts', 'href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"');
@@ -39,6 +39,7 @@ function ph_register_assets () {
     wp_enqueue_style( 'style');
 }
 function ph_init(){
+    //test Taxonomy
     register_taxonomy('service', ['post', 'page'],[
         'labels' => [
             'name' => 'Service',
@@ -56,11 +57,12 @@ function ph_init(){
         'hierarchical' => true,
         'show_admin_cloumn'=> true
     ]);
-    register_post_type('galerie', [
-        'label' => 'Galerie',
-        'public' => true,
-        'menu_icon' => 'dashicons-format-gallery'
-    ]);
+    //Test pour faire un Custom Post Type
+    // register_post_type('galerie', [
+    //     'label' => 'Galerie',
+    //     'public' => true,
+    //     'menu_icon' => 'dashicons-format-gallery'
+    // ]);
 }
 
 // ********************************ADD_ACTION******************************

@@ -1,6 +1,6 @@
 <?php get_header();?>
 <section class="container" id="actu">
-    <div class="actu-titre row">
+    <div class=" jumbotron actu-titre row">
         <h1><?php echo get_bloginfo( 'name' ); ?> • <?= wp_title(); ?></h1>
     </div>
      <div class="row">

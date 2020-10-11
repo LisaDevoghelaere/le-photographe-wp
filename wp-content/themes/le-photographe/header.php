@@ -3,8 +3,7 @@
   <head>
       <meta charset="<?php bloginfo('charset'); ?>">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-      <meta name="description" content="Site de Photographe, ses services, ses actualités et une gallerie d'image">
-      
+      <meta name="description" content="Site de Photographe, ses services, ses actualités et une galerie d'image">     
       <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
